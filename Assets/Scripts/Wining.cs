@@ -20,6 +20,7 @@ namespace Assets.Scripts
             AudioManager.instance.PlayMusic(AudioManager.Track.Won, true, 0.5f);
             winingName.text = name + " the winner!!!";
             WiningPlayer.sprite = player;
+            GameManager.Instance.eventSystem.SetActive(true);
         }
         public void BackToMenu()
         {

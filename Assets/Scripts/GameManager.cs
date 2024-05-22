@@ -8,10 +8,10 @@ namespace Assets.Scripts
 {
     internal class GameManager : MonoBehaviour
     {
-        [HideInInspector] public event Action<Player> OnPlayerData;
-        [HideInInspector] public event Action<int> OnPlayerTimer;
+        //[HideInInspector] public event Action<Player> OnPlayerData;
+        //[HideInInspector] public event Action<int> OnPlayerTimer;
         [HideInInspector] public event Action OnRollDices;
-        [HideInInspector] public event Action<bool> OnHUD;
+        //[HideInInspector] public event Action<bool> OnHUD;
         public int totalSteps = 55;
         public int row = 6;
         public int offset = 1;
@@ -254,7 +254,7 @@ namespace Assets.Scripts
                     }
                     break;
             }
-            OnPlayerData?.Invoke(players[playerIndex]);
+            //OnPlayerData?.Invoke(players[playerIndex]);
             hud.HandlePlayerDataChange(players[playerIndex]);
         }
 
@@ -350,7 +350,8 @@ namespace Assets.Scripts
                 player.playerData.skipTurns += step.value;
             }
             
-            OnPlayerData?.Invoke(player);
+            //OnPlayerData?.Invoke(player);
+            hud.HandlePlayerDataChange(player);
         }
         public void AttackPlayer(Player player, int value)
         {
