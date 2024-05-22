@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &578941615272110289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7424928007318946811}
+  - component: {fileID: 5322332528125454966}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7424928007318946811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578941615272110289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2143458, y: -1.8101571, z: -0.02957953}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5322332528125454966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578941615272110289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556095151d78eab43aa2bed81e154c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalSteps: 55
+  row: 6
+  offset: 1
+  posOffset: 1
+  startPos: {x: -7.5, y: 1.5, z: 0}
+  stepPrefab: {fileID: 2111579618768579350, guid: dd357c581ed91a2468af9ca8b5667c4d, type: 3}
+  steps:
+  - {fileID: 11400000, guid: bf76b2263b41ff643bddfb677e7bf1c2, type: 2}
+  - {fileID: 11400000, guid: 6706743d63535ad45aa770917a0f8e14, type: 2}
+  - {fileID: 11400000, guid: 492d91d850efdbd4eb67d9515d7b7763, type: 2}
+  - {fileID: 11400000, guid: 615923b251b36cd4ebd477258c27ccf7, type: 2}
+  - {fileID: 11400000, guid: 81eef596e04188b4aac5ffb26333c93a, type: 2}
+  - {fileID: 11400000, guid: 578ce0c27bbede64cb3bf1b7787818a5, type: 2}
+  - {fileID: 11400000, guid: ae51fca6199c577488c816710d849501, type: 2}
+  - {fileID: 11400000, guid: b3a8e418cbff3ba4a9b69ed6f01dce23, type: 2}
+  - {fileID: 11400000, guid: 6aa920134c2fda243ba23f665fbd19a5, type: 2}
+  - {fileID: 11400000, guid: 5abcef71f8bf1e34780032b57f285b40, type: 2}
+  - {fileID: 11400000, guid: 89b7ecd4ee1995f40b206cba4c67c3b7, type: 2}
+  - {fileID: 11400000, guid: e9d56c076044449488f18998d0dbf6fc, type: 2}
+  - {fileID: 11400000, guid: 1c4581c2ec8f7ea4a8df89d3d3fc2801, type: 2}
+  - {fileID: 11400000, guid: e78d8581c690bb34f8f2a97765b9c861, type: 2}
+  - {fileID: 11400000, guid: 1e36a9c4a1012c344994780863ed2d4b, type: 2}
+  - {fileID: 11400000, guid: ab5a77bf18c54394cb55f7a60068dee0, type: 2}
+  - {fileID: 11400000, guid: 24fd209a6af12f24a9ecc8096e1c0012, type: 2}
+  - {fileID: 11400000, guid: 514458d460da5864782cd7f458b80b67, type: 2}
+  - {fileID: 11400000, guid: 9715430f89fc804468c011fbd7b504da, type: 2}
+  - {fileID: 11400000, guid: 7309f5f8908f148418b0bc052a782c00, type: 2}
+  - {fileID: 11400000, guid: 50ffa62887c0d2340a82d134c0a6541c, type: 2}
+  - {fileID: 11400000, guid: 64016d07aaa95c94a8218df0feaf38c3, type: 2}
+  - {fileID: 11400000, guid: 76cd6c4b6fc53794cb34eaef8ffe454e, type: 2}
+  - {fileID: 11400000, guid: 4006179ee8e792d468fadf08dc5f3f96, type: 2}
+  - {fileID: 11400000, guid: f202e856064fbfe48aae33c5921ef7d1, type: 2}
+  - {fileID: 11400000, guid: a45006978170e88478689ee741b6d0b9, type: 2}
+  sprites:
+  - {fileID: 21300000, guid: a10d9f3b1e8b2d2419f28fa3e6e37d97, type: 3}
+  - {fileID: 21300000, guid: 2e732a8d76c27444eb1abff79feb8131, type: 3}
+  - {fileID: 21300000, guid: 260bdb9cf616f9240a8767727da265f9, type: 3}
+  - {fileID: 21300000, guid: 8299f0dcb35e5264b9c87295aad5f49f, type: 3}
+  - {fileID: 21300000, guid: 3d29c73669ef40d45b6160f2c2c09ca2, type: 3}
+  - {fileID: 21300000, guid: ece933c7ae6856b4e8b7432bda13fff4, type: 3}
+  - {fileID: 21300000, guid: f28ffb22a282ced4f8a5f99ad5ae52d5, type: 3}
+  - {fileID: 21300000, guid: 1c034592b190632449f7586dc5dafaf2, type: 3}
+  - {fileID: 21300000, guid: 2c007281bb496fc4094caf6702f5baac, type: 3}
+  rollDice: {fileID: 0}
+  players:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playerPlay: 3
+  eventSystem: {fileID: 0}
+  mouseHover: {fileID: 0}
+  WinMenu: {fileID: 0}
+  boom: {fileID: 8300000, guid: e17cf10ef35d30147bc88bed50b6a6d6, type: 3}
+  powerUp: {fileID: 8300000, guid: 26cb14dd21d105f4f91b6f69d4625cf0, type: 3}
+  coin: {fileID: 8300000, guid: d1421c40e7e79cc49b265a8339e2c8b8, type: 3}
+  attack: {fileID: 8300000, guid: f8f3ab32475ba2a479e3a7815f24468a, type: 3}
+  jump: {fileID: 8300000, guid: 2c40a0fdad678954099c15c668683881, type: 3}
+  NextTurn: {fileID: 8300000, guid: 04fb10bcfbc55eb4fb890ec17957df2b, type: 3}
+  Hit: {fileID: 8300000, guid: f01e88a4ce4819d4d886bb6c40812258, type: 3}
+  currentPlayer: 0
+  gameSteps: []
+  playerAnimator: []
+  gameState: 2
