@@ -194,6 +194,7 @@ namespace Assets.Scripts
                         GameManager.Instance.players[GameManager.Instance.currentPlayer - 1].playerData.bombs--;
                         GameManager.Instance.mouseHover.SetActive(false);
                         GameManager.Instance.OnChangePlayerData();
+                        GameManager.Instance.ToggleHUDRaycast(true);
                         Items.onActive = false;
                         break;
 
@@ -203,6 +204,7 @@ namespace Assets.Scripts
                         playerData.healths = Mathf.Clamp(playerData.healths + 2, 0, playerData.healthsMax); //todo set heal potion point
                         GameManager.Instance.mouseHover.SetActive(false);
                         GameManager.Instance.OnChangePlayerData();
+                        GameManager.Instance.ToggleHUDRaycast(true);
                         Items.onActive = false;
                         break;
                 }

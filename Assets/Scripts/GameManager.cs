@@ -371,6 +371,8 @@ namespace Assets.Scripts
         }
         public void ItemUsing(int id, bool activate)
         {
+            //eventSystem.SetActive(!activate);
+            ToggleHUDRaycast(!activate);
             if (id == 0)
             {
                 mouseHover.GetComponent<SpriteRenderer>().sprite = sprites[8];

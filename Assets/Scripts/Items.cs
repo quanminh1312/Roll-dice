@@ -18,11 +18,21 @@ public class Items : MonoBehaviour
         switch(id)
         {
             case 0:
-                if (GameManager.Instance.players[GameManager.Instance.currentPlayer - 1].playerData.bombs == 0) return;
+                if (GameManager.Instance.players[GameManager.Instance.currentPlayer - 1].playerData.bombs <= 0)
+                {
+                    onActive = false;
+                    GameManager.Instance.ItemUsing(id, onActive);
+                    return;
+                }
                 break;
 
             case 1:
-                if (GameManager.Instance.players[GameManager.Instance.currentPlayer - 1].playerData.potions == 0) return;
+                if (GameManager.Instance.players[GameManager.Instance.currentPlayer - 1].playerData.potions <= 0)
+                {
+                    onActive = false;
+                    GameManager.Instance.ItemUsing(id, onActive);
+                    return;
+                }
                 break;
         }
         if (itemID != id)
