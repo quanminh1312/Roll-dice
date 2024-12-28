@@ -3,23 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonsSound : MonoBehaviour, ISelectHandler, ISubmitHandler
+public class ButtonsSound : MonoBehaviour, IPointerClickHandler
 {
-    public AudioClip selectSound = null;
-    public AudioClip submitSound = null;
-    public void OnSelect(BaseEventData eventData)
-    {
-        if (selectSound)
-        {
-            AudioManager.instance.PlaySFX(selectSound);
-        }
-    }
+    public AudioClip Sound = null;
 
-    public void OnSubmit(BaseEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        if (submitSound)
+        if (Sound)
         {
-            AudioManager.instance.PlaySFX(submitSound);
+            AudioManager.instance.PlaySFX(Sound);
         }
     }
 }

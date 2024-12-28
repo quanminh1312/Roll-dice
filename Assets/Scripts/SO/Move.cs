@@ -7,11 +7,11 @@ public class Move : Step
 {
     public Move()
     {
-        type = Helper.StepType.Move;
+        type = Step.StepType.Move;
     }
-    public override Helper.MoveType Execute(out int Value)
+    public override Step.MoveType Execute(out int Value)
     {
         Value = value;
-        return Helper.MoveType.Move;
+        return Step.MoveType.Move;
     }
 }

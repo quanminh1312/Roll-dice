@@ -1,9 +1,9 @@
-using Assets.Scripts;
 using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts;
 
 public class DiceRollerUI : MonoBehaviour
 {

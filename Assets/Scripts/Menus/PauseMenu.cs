@@ -1,31 +1,32 @@
-using Assets.Scripts;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Assets.Scripts;
 
-public class PauseMenu : Menu
+namespace Assets.Scripts
 {
-    public static PauseMenu instance = null;
+    public class PauseMenu : Menu
+    {
+        public static PauseMenu instance = null;
 
-    private void Start()
-    {
-        if (instance)
+        private void Start()
         {
-            Debug.LogError("Multiple PauseMenu instances!");
-            Destroy(gameObject);
-            return;
+            if (instance)
+            {
+                Debug.LogError("Multiple PauseMenu instances!");
+                Destroy(gameObject);
+                return;
+            }
+            instance = this;
         }
-        instance = this;
-    }
-    public void OnResumeButton()
-    {
-        GameManager.Instance.TogglePause();
-    }
-    public void OnMainMenuButton()
-    {
-        Time.timeScale = 1;
-        TurnOff(false);
-        SceneManager.LoadScene("MainMenu");
+        public void OnResumeButton()
+        {
+            GameManager.Instance.TogglePause();
+        }
+        public void OnMainMenuButton()
+        {
+            Time.timeScale = 1;
+            TurnOff(false);
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }

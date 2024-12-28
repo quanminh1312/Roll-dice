@@ -3282,8 +3282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847777845f35d314da5d6e296bff21db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectSound: {fileID: 8300000, guid: c84e25db29f24f84b906220b28e59082, type: 3}
-  submitSound: {fileID: 8300000, guid: b27f4ab0e87db88488a73ae466e56e09, type: 3}
+  Sound: {fileID: 8300000, guid: c84e25db29f24f84b906220b28e59082, type: 3}
 --- !u!1 &471022854
 GameObject:
   m_ObjectHideFlags: 0
@@ -4856,8 +4855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847777845f35d314da5d6e296bff21db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectSound: {fileID: 8300000, guid: c84e25db29f24f84b906220b28e59082, type: 3}
-  submitSound: {fileID: 8300000, guid: b27f4ab0e87db88488a73ae466e56e09, type: 3}
+  Sound: {fileID: 8300000, guid: c84e25db29f24f84b906220b28e59082, type: 3}
 --- !u!1 &1515527861
 GameObject:
   m_ObjectHideFlags: 0

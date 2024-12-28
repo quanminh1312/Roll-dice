@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -25,14 +26,14 @@ public class MainMenu : Menu
     public void ToGamePlayScene()
     {
         TurnOff(false);
-        SceneManager.LoadScene("GamePlay");
+        SelectMenu.instance.TurnOn(this);
     }
     public void Quit()
     {
-        #if UNITY_EDITOR
-                EditorApplication.isPlaying = false;
-        #else
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
                     Application.Quit();
-        #endif
+#endif
     }
 }

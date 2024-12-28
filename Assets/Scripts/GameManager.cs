@@ -6,7 +6,7 @@ using Assets.Scripts.SO;
 
 namespace Assets.Scripts
 {
-    internal class GameManager : MonoBehaviour
+    public class GameManager : MonoBehaviour
     {
         //[HideInInspector] public event Action<Player> OnPlayerData;
         //[HideInInspector] public event Action<int> OnPlayerTimer;
@@ -21,11 +21,12 @@ namespace Assets.Scripts
         public List<Step> steps = new List<Step>();
         public List<Sprite> sprites = new List<Sprite>();
         public GameObject rollDice;
-        public List<Player> players; //TODO players
+        public GameObject playerGroup;
+        public List<GameObject> playerPrefabs = new List<GameObject>();
+        public List<Player> players = new List<Player>();
         public int playerPlay = 3;
         public GameObject eventSystem;
         public GameObject mouseHover;
-        public GameObject WinMenu;
         public AudioClip boom;
         public AudioClip powerUp;
         public AudioClip coin;
@@ -53,6 +54,8 @@ namespace Assets.Scripts
         private void Start()
         {
             Application.targetFrameRate = 60;
+            AddPlayer();
+            hud.playerName.text = players[0].playerName + " Turn's";
             Play();
         }
         private void Update()
@@ -62,10 +65,24 @@ namespace Assets.Scripts
                 TogglePause();
             }
         }
+        public void AddPlayer()
+        {
+            for (int i = 0; i < Helper.playerIndex.Count; i++)
+            {
+                //instatiate player and set parent and set transform at 0 , 0 , 0
+                Player player = Instantiate(playerPrefabs[Helper.playerIndex[i]]).GetComponent<Player>();
+                player.transform.SetParent(playerGroup.transform);
+                player.transform.localPosition = Vector3.zero;
+                player.playerIndex = players.Count + 1;
+                player.playerName = Helper.playerNames[i];
+                players.Add(player);
+            }
+            playerPlay = players.Count;
+        }
         public void Wining(int index)
         {
-            WinMenu.GetComponent<Wining>().Win(players[index - 1].playerName, players[index - 1].playerImage);
-            WinMenu.SetActive(true);
+            WinningMenu.instance.Win(players[index - 1].playerName, players[index - 1].playerImage);
+            WinningMenu.instance.TurnOn(null);
         }
         public Vector3 GetStepPosition(int step)
         {
@@ -211,7 +228,7 @@ namespace Assets.Scripts
         public void HandleTimer(int timer)
         {
             //OnPlayerTimer?.Invoke(timer);
-            hud.HandelTimer(timer);
+            hud.HandleTimer(timer);
         }
         public bool ToggleHUDRaycast(bool isOn)
         {
@@ -269,21 +286,21 @@ namespace Assets.Scripts
             }
             Step step = gameSteps[player.currentStep - 2].stepConfig;
             int value;
-            Helper.MoveType moveType = step.Execute(out value);
+            Step.MoveType moveType = step.Execute(out value);
             switch(moveType)
             {
-                case Helper.MoveType.Move:
+                case Step.MoveType.Move:
                     player.steps = value;
                     player.doneStep = false;
                     break;
 
-                case Helper.MoveType.UseEffect:
+                case Step.MoveType.UseEffect:
                     UseEffect(player, step);
                     player.doneStep = true;
                     player.doneTurn = true;
                     break;
 
-                case Helper.MoveType.None:
+                case Step.MoveType.None:
                     CollectSteps(player, step);
                     player.doneStep = true;
                     player.doneTurn = true;
@@ -292,7 +309,7 @@ namespace Assets.Scripts
         }
         public void UseEffect(Player player, Step step)
         {
-            if (step.type == Helper.StepType.Trap)
+            if (step.type == Step.StepType.Trap)
             {
                 EffectSystem.instance.SpawnSmallExplosion(player.gameObject.transform.position);
                 if (AudioManager.instance) AudioManager.instance.PlaySFX(boom);
@@ -307,17 +324,17 @@ namespace Assets.Scripts
                     player.playerData.shields = 0;
                 }
             }
-            else if (step.type == Helper.StepType.Defend)
+            else if (step.type == Step.StepType.Defend)
             {
                 player.playerData.shields = Mathf.Clamp(player.playerData.shields + step.value, 0, player.playerData.shieldsMax);
                 if (AudioManager.instance) AudioManager.instance.PlaySFX(powerUp);
             }
-            else if (step.type == Helper.StepType.Heal)
+            else if (step.type == Step.StepType.Heal)
             {
                 player.playerData.healths = Mathf.Clamp(player.playerData.healths + step.value, 0, player.playerData.healthsMax);
                 if (AudioManager.instance) AudioManager.instance.PlaySFX(powerUp);
             }
-            else if (step.type == Helper.StepType.Attack)
+            else if (step.type == Step.StepType.Attack)
             {
                 //todo attack other player
                 AttackPlayer(player, step.value);
@@ -327,25 +344,25 @@ namespace Assets.Scripts
         }
         public void CollectSteps(Player player, Step step)
         {
-            if (step.type == Helper.StepType.Collect)
+            if (step.type == Step.StepType.Collect)
             {
-                if (((Collect)step).collectType == Helper.CollectType.Gold)
+                if (((Collect)step).collectType == Step.CollectType.Gold)
                 {
                     player.playerData.Golds += step.value;
                     if (AudioManager.instance) AudioManager.instance.PlaySFX(coin);
                 }
-                else if (((Collect)step).collectType == Helper.CollectType.Potion)
+                else if (((Collect)step).collectType == Step.CollectType.Potion)
                 {
                     player.playerData.potions += step.value;
                     if (AudioManager.instance) AudioManager.instance.PlaySFX(coin);
                 }
-                else if (((Collect)step).collectType == Helper.CollectType.Bomb)
+                else if (((Collect)step).collectType == Step.CollectType.Bomb)
                 {
                     player.playerData.bombs += step.value;
                     if (AudioManager.instance) AudioManager.instance.PlaySFX(coin);
                 }
             }
-            else if (step.type == Helper.StepType.Skip)
+            else if (step.type == Step.StepType.Skip)
             {
                 player.playerData.skipTurns += step.value;
             }

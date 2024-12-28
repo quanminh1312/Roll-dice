@@ -1,17 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
-    internal class Wining : MonoBehaviour
+    public class WinningMenu : Menu
     {
+        public static WinningMenu instance = null;
+        private void Start()
+        {
+            if (instance)
+            {
+                Debug.LogError("more than one MainMenu");
+                Destroy(gameObject);
+                return;
+            }
+
+            instance = this;
+        }
+
         public TextMeshProUGUI winingName;
         public Image WiningPlayer;
 

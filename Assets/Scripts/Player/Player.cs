@@ -143,7 +143,7 @@ namespace Assets.Scripts
         }
         bool CheckWinning()
         {
-            if (currentStep == GameManager.Instance.totalSteps)
+            if (currentStep >= GameManager.Instance.totalSteps)
             {
                 Winning = true;
                 return true;
@@ -187,25 +187,22 @@ namespace Assets.Scripts
                 {
                     case 0:
                         if (isTurn) return;
-                        GetAttack(1); //todo set bomb point
-                        if (AudioManager.instance) AudioManager.instance.PlaySFX(GameManager.Instance.boom);
+                        GetAttack(2);
+                        AudioManager.instance.PlaySFX(GameManager.Instance.boom);
                         AudioManager.instance.PlaySFX(GameManager.Instance.Hit);
                         EffectSystem.instance.SpawnSmallExplosion(transform.position);
                         GameManager.Instance.players[GameManager.Instance.currentPlayer - 1].playerData.bombs--;
-                        GameManager.Instance.mouseHover.SetActive(false);
                         GameManager.Instance.OnChangePlayerData();
-                        GameManager.Instance.ToggleHUDRaycast(true);
-                        Items.onActive = false;
                         break;
 
                     case 1:
                         if (!isTurn) return;
+                        if (playerData.potions <= 0) return;
+                        if (playerData.healths == playerData.healthsMax) return;
+                        AudioManager.instance.PlaySFX(GameManager.Instance.powerUp);
                         playerData.potions--;
-                        playerData.healths = Mathf.Clamp(playerData.healths + 2, 0, playerData.healthsMax); //todo set heal potion point
-                        GameManager.Instance.mouseHover.SetActive(false);
+                        playerData.healths = Mathf.Clamp(playerData.healths + 2, 0, playerData.healthsMax);
                         GameManager.Instance.OnChangePlayerData();
-                        GameManager.Instance.ToggleHUDRaycast(true);
-                        Items.onActive = false;
                         break;
                 }
             }

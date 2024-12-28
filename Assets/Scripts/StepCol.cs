@@ -1,5 +1,4 @@
 ﻿using Assets.Scripts.SO;
-using FIMSpace;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +9,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    internal class StepCol : MonoBehaviour
+    public class StepCol : MonoBehaviour
     {
         public Step stepConfig;
         [SerializeField] new SpriteRenderer renderer;
@@ -18,9 +17,9 @@ namespace Assets.Scripts
 
         private void Start()
         {
-            if (stepConfig.type != Helper.StepType.None)
+            if (stepConfig.type != Step.StepType.None)
             {
-                if (stepConfig.type == Helper.StepType.Trap)
+                if (stepConfig.type == Step.StepType.Trap)
                 {
                     renderer.color = new Color(1, 1, 1, 1);
                 }

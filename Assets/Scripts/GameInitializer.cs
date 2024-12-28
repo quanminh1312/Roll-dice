@@ -28,7 +28,6 @@ namespace Assets
                 if (ManagerPrefab)
                 {
                     Instantiate(ManagerPrefab);
-                    Helper.Init();
                 }
             }
         }
@@ -40,12 +39,12 @@ namespace Assets
                 switch (gameMode)
                 {
                     case GameMode.Menus:
-                        MenuManager.instance.SwitchToMainMenuMenus();
-                        //GameManager.Instance.gameState = GameManager.GameState.InMenus;
+                        SceneManager.LoadScene("MainMenuMenu", LoadSceneMode.Additive);
+                        SceneManager.LoadScene("SelectMenu", LoadSceneMode.Additive);
                         break;
                     case GameMode.GamePlay:
-                        MenuManager.instance.SwitchToGameplayMenus();
-                        //GameManager.Instance.gameState = GameManager.GameState.Playing;
+                        SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+                        SceneManager.LoadScene("WinningMenu", LoadSceneMode.Additive);
                         break;
                 }
 

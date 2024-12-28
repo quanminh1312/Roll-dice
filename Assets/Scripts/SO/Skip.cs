@@ -12,12 +12,12 @@ namespace Assets.Scripts.SO
     {
         public Skip()
         {
-            type = Helper.StepType.Skip;
+            type = Step.StepType.Skip;
         }
-        public override Helper.MoveType Execute(out int Value)
+        public override Step.MoveType Execute(out int Value)
         {
             Value = value;
-            return Helper.MoveType.None;
+            return Step.MoveType.None;
         }
     }
 }

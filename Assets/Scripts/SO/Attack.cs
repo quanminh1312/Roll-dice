@@ -18,12 +18,12 @@ namespace Assets.Scripts.SO
         }
         public Attack()
         {
-            type = Helper.StepType.Attack;
+            type = Step.StepType.Attack;
         }
-        public override Helper.MoveType Execute(out int Value)
+        public override Step.MoveType Execute(out int Value)
         {
             Value = value;
-            return Helper.MoveType.UseEffect;
+            return Step.MoveType.UseEffect;
         }
     }
 }

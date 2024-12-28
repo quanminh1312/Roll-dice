@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 namespace Assets.Scripts.SO
 {
@@ -13,12 +12,12 @@ namespace Assets.Scripts.SO
     {
         public Defend()
         {
-            type = Helper.StepType.Defend;
+            type = Step.StepType.Defend;
         }
-        public override Helper.MoveType Execute(out int Value)
+        public override Step.MoveType Execute(out int Value)
         {
             Value = value;
-            return Helper.MoveType.UseEffect;
+            return Step.MoveType.UseEffect;
         }
     }
 }

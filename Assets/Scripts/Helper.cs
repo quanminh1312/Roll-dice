@@ -1,37 +1,25 @@
-using Assets.Scripts;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Helper
+namespace Assets
 {
-    public static Helper Instance { get; private set; }
-    public static void Init()
+    public static class Helper
     {
-        Instance = new Helper();
-    }
-    public enum StepType
-    {
-        Move,
-        Attack,
-        Defend,
-        Heal,
-        Skip,
-        Trap,
-        Collect,
-        None
-    }
-    public enum MoveType
-    {
-        Move,
-        UseEffect,
-        None
-    }
-    public enum CollectType
-    {
-        Gold,
-        Potion,
-        Bomb,
-        None
+        public static List<int> playerIndex = new List<int>();
+        public static List<string> playerNames = new List<string>();
+        public static void ClearPlayers()
+        {
+            playerIndex.Clear();
+            playerNames.Clear();
+        }
+        public static void AddPlayer(int index, string name)
+        {
+            playerIndex.Add(index);
+            //get only 7 characters
+            playerNames.Add(name.Length > 8 ? name.Substring(0, 8) : name);
+        }
     }
 }

@@ -8,18 +8,18 @@ using UnityEngine;
 namespace Assets.Scripts.SO
 {
     [CreateAssetMenu(fileName = "Collect", menuName = "Step/Collect")]
-    internal class Collect : Step
+    public class Collect : Step
     {
         [SerializeField]
-        public Helper.CollectType collectType;
+        public Step.CollectType collectType;
         public Collect()
         {
-            type = Helper.StepType.Collect;
+            type = Step.StepType.Collect;
         }
-        public override Helper.MoveType Execute(out int Value)
+        public override Step.MoveType Execute(out int Value)
         {
             Value = value;
-            return Helper.MoveType.None;
+            return Step.MoveType.None;
         }
     }
 }
