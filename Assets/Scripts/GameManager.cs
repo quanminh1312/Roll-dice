@@ -67,6 +67,7 @@ namespace Assets.Scripts
         }
         public void AddPlayer()
         {
+            players.Clear();
             for (int i = 0; i < Helper.playerIndex.Count; i++)
             {
                 //instatiate player and set parent and set transform at 0 , 0 , 0
