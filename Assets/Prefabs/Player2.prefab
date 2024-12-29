@@ -817,6 +817,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 2
   playerName: Trung
+  playerImages:
+  - {fileID: 21300000, guid: 7160fbf5b7c0aad4399ef0dce7392e17, type: 3}
+  - {fileID: 21300000, guid: 542aa742b9725fe43ad0c2e9d5ee1347, type: 3}
+  - {fileID: 21300000, guid: 3cf4f5ca93729534d8b7896d872e925e, type: 3}
+  - {fileID: 21300000, guid: 5fb088ff7d89f514791b97208054553c, type: 3}
+  - {fileID: 21300000, guid: 80d3334e24c91d54297de5e49356e778, type: 3}
+  - {fileID: 21300000, guid: 6b0cdcf68c00d7d4fb7dabc7e761aab1, type: 3}
+  - {fileID: 21300000, guid: 7864865adaec01d4db7c1eca762d5199, type: 3}
+  - {fileID: 21300000, guid: 316cceb1feb600f4d838a4f3e931ef7f, type: 3}
+  - {fileID: 21300000, guid: 2e52591561afc3948b6ad496c999415e, type: 3}
+  - {fileID: 21300000, guid: 577c7c24558befc428aea21ad321e331, type: 3}
+  - {fileID: 21300000, guid: 09ce6f9b2e39d00438c183605afb6d78, type: 3}
+  - {fileID: 21300000, guid: 9b595a464538446459a01ab390f7c74a, type: 3}
+  - {fileID: 21300000, guid: cd97ca06965688e448d357065b60f3dd, type: 3}
+  - {fileID: 21300000, guid: a2a8a1cc766ffe842af90b5af9789ca4, type: 3}
+  - {fileID: 21300000, guid: dbfeee0e35acbde42a12d47b76ce0940, type: 3}
+  - {fileID: 21300000, guid: 2f8751e77363bbe40a481f57a7942a42, type: 3}
+  - {fileID: 21300000, guid: c2ac1f1af6a86a94c854e75c17795d6d, type: 3}
+  - {fileID: 21300000, guid: 53361b554ee2de5479261857831de77b, type: 3}
+  - {fileID: 21300000, guid: 4ba151f9d0a540a4ab4d77694ff6131b, type: 3}
+  - {fileID: 21300000, guid: 5c79a123d77e0ee42874c008d686a45d, type: 3}
+  - {fileID: 21300000, guid: ded6a4c6253170b4f8585534a1619068, type: 3}
+  - {fileID: 21300000, guid: fd16415e1332bee4a95fd69260923ed0, type: 3}
+  - {fileID: 21300000, guid: f478d8a26f4de384293d1f4e0371654c, type: 3}
+  - {fileID: 21300000, guid: 602ec3b919ff3cc46a5a18e270b533a4, type: 3}
+  - {fileID: 21300000, guid: f3872f8db24964f41b7857ee5a2c72a9, type: 3}
+  - {fileID: 21300000, guid: f11f04fdbbd82e6468a762b91b357203, type: 3}
+  - {fileID: 21300000, guid: 6d47ed7226b7be0448f8f2d06d7e710d, type: 3}
+  - {fileID: 21300000, guid: 5c8b4dccebd548a478832da1d429bfe3, type: 3}
+  - {fileID: 21300000, guid: f421056af6f7cfc4dad9114ce81e4877, type: 3}
+  - {fileID: 21300000, guid: 511cd2ce0b8f6d84fa1fca23eb5600c2, type: 3}
   playerImage: {fileID: -2007875927, guid: 9a0c6595e52fc4745beff57f00c6730a, type: 3}
   playerInfo: {fileID: 2825527900091551421}
   steps: 0

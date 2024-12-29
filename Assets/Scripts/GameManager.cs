@@ -49,6 +49,17 @@ namespace Assets.Scripts
         public static GameManager Instance = null;
         private void Awake()
         {
+            // destroy old instance if exist
+            if (Instance != null)
+            {
+                //delete all player and playerGameObjects
+                for (int i = 0; i < players.Count; i++)
+                {
+                    Destroy(players[i].gameObject);
+                }
+                players.Clear();
+                Destroy(Instance);
+            }
             Instance = this;
         }
         private void Start()
@@ -56,6 +67,7 @@ namespace Assets.Scripts
             Application.targetFrameRate = 60;
             AddPlayer();
             hud.playerName.text = players[0].playerName + " Turn's";
+            eventSystem.SetActive(true);
             Play();
         }
         private void Update()
@@ -67,7 +79,6 @@ namespace Assets.Scripts
         }
         public void AddPlayer()
         {
-            players.Clear();
             for (int i = 0; i < Helper.playerIndex.Count; i++)
             {
                 //instatiate player and set parent and set transform at 0 , 0 , 0
@@ -82,8 +93,9 @@ namespace Assets.Scripts
         }
         public void Wining(int index)
         {
-            WinningMenu.instance.Win(players[index - 1].playerName, players[index - 1].playerImage);
-            WinningMenu.instance.TurnOn(null);
+            eventSystem.SetActive(true);
+            WinningMenu.instance.Win(players[index - 1].playerName, players[index - 1].playerImages);
+            Time.timeScale = 0;
         }
         public Vector3 GetStepPosition(int step)
         {
@@ -314,6 +326,7 @@ namespace Assets.Scripts
             {
                 EffectSystem.instance.SpawnSmallExplosion(player.gameObject.transform.position);
                 if (AudioManager.instance) AudioManager.instance.PlaySFX(boom);
+                if (AudioManager.instance) AudioManager.instance.PlaySFX(Hit);
                 playerAnimator[player.playerIndex - 1].SetTrigger("Fall");
                 if (player.playerData.shields >= 2)
                 {

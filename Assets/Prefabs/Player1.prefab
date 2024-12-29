@@ -1728,6 +1728,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 1
   playerName: Quan
+  playerImages:
+  - {fileID: 21300000, guid: 77db6d4f7ca716d4781dd7c5f1526b80, type: 3}
+  - {fileID: 21300000, guid: 0ed9460df94e9f3489ec2590b75464bf, type: 3}
+  - {fileID: 21300000, guid: e10fe43e715842746bbd57d790e79e96, type: 3}
+  - {fileID: 21300000, guid: 1701df620773e4c4fb55dcb28e77e902, type: 3}
+  - {fileID: 21300000, guid: ffb89261809b86a4d9662ed3dd2058bf, type: 3}
+  - {fileID: 21300000, guid: be624c123e71c3c4f83bd94f265d9a74, type: 3}
+  - {fileID: 21300000, guid: c31607f12f9e64045b5a7e911625517d, type: 3}
+  - {fileID: 21300000, guid: ca0750925e9ec5b45addf40aaf4739da, type: 3}
+  - {fileID: 21300000, guid: a65bde11a4708424abe1241351ee64e7, type: 3}
+  - {fileID: 21300000, guid: f9e387f070ea49b4b9bde574b9999bd1, type: 3}
+  - {fileID: 21300000, guid: 0d9ab3ea7a1cc4f4f9662564971faff3, type: 3}
+  - {fileID: 21300000, guid: df0ce38b41fd76841be5be72d6927e7d, type: 3}
+  - {fileID: 21300000, guid: 7ac3f9634c6435342b066970e80b2cda, type: 3}
+  - {fileID: 21300000, guid: 95edde5e454a83e43930abf996ab5d40, type: 3}
+  - {fileID: 21300000, guid: 155b1d6592cfbfa4f9def0ee0fa00a5e, type: 3}
+  - {fileID: 21300000, guid: e0734cf2f3891ce428fa2b5710427e35, type: 3}
+  - {fileID: 21300000, guid: 5e4ea57322ba8df49b64f128012d6fab, type: 3}
+  - {fileID: 21300000, guid: 31bd3319514065f4b9ef326845e07c36, type: 3}
+  - {fileID: 21300000, guid: c8621629c67b31e4bb309b7c6176b959, type: 3}
+  - {fileID: 21300000, guid: 66e709299e834b9488303977336efbba, type: 3}
+  - {fileID: 21300000, guid: f9d107e5a2f88ef4f8cbeb4f34e5839d, type: 3}
+  - {fileID: 21300000, guid: 52980c27ceb13554aa50eb1a533187df, type: 3}
+  - {fileID: 21300000, guid: 4de62d09279af6440897234d39ad0016, type: 3}
+  - {fileID: 21300000, guid: dd071cef088d0664f815a916f666144d, type: 3}
+  - {fileID: 21300000, guid: 3d22d24776af64449b25f9feeb717c0c, type: 3}
+  - {fileID: 21300000, guid: 4ba8198ea33860248855e060de1cd68c, type: 3}
+  - {fileID: 21300000, guid: c5811a4f434055a409bf1a1d2c6c0546, type: 3}
+  - {fileID: 21300000, guid: 1d5bad8c39ea65541a3bd0c9007a4930, type: 3}
+  - {fileID: 21300000, guid: b1243fc983caf11429f39f77b1906b03, type: 3}
+  - {fileID: 21300000, guid: a7ab4b2daf7583246b6766f0ef9021ce, type: 3}
   playerImage: {fileID: -49794624, guid: 538e40a78f3f3af4b889cca84f992fd5, type: 3}
   playerInfo: {fileID: 7527796519357718877}
   steps: 0

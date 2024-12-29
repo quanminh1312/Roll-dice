@@ -12,14 +12,15 @@ namespace Assets.Scripts
     {
         public int playerIndex;
         public string playerName;
+        public List<Sprite> playerImages;
         public Sprite playerImage;
         public GameObject playerInfo;
 
 
-        [HideInInspector]public int steps = 0;
+        [HideInInspector] public int steps = 0;
         [HideInInspector] public int currentStep = 1;
         [HideInInspector] private bool isMoving = false;
-        [HideInInspector] public bool isTurn = false; //TODO
+        [HideInInspector] public bool isTurn = false;
         [HideInInspector] public bool Winning = false;
         [HideInInspector] public bool isDead = false;
         [HideInInspector] public bool doneTurn = false;

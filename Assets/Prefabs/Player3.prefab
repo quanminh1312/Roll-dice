@@ -597,6 +597,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 3
   playerName: Tin
+  playerImages:
+  - {fileID: 21300000, guid: eb76cefa4592ac140bee16782f26a653, type: 3}
+  - {fileID: 21300000, guid: 3f9bbe184a19af342a37c16b4de44799, type: 3}
+  - {fileID: 21300000, guid: f0c53a127d40b39409800012fa3bffe4, type: 3}
+  - {fileID: 21300000, guid: 4fa73346f8250f34dab67caa1ddcb959, type: 3}
+  - {fileID: 21300000, guid: a0e232c614a755c489b122c49f42cf42, type: 3}
+  - {fileID: 21300000, guid: a89fc833c37d6c14cba5bd009707a3e5, type: 3}
+  - {fileID: 21300000, guid: ed3c7c8ccfd3ae84db13f51d444a390d, type: 3}
+  - {fileID: 21300000, guid: 1c67d24a34b074e42978e56ec1831ecb, type: 3}
+  - {fileID: 21300000, guid: 2ff2223401546cd4da30a7cc4420e527, type: 3}
+  - {fileID: 21300000, guid: cabd435686dd83343a39fd11ca80011b, type: 3}
+  - {fileID: 21300000, guid: 54ea00a1b1b49784b8e89ad46e747092, type: 3}
+  - {fileID: 21300000, guid: f5925b4978a2caa4eaf2fd040f61fb7f, type: 3}
+  - {fileID: 21300000, guid: 5e98e354e437852478b9ff235cbaa53c, type: 3}
+  - {fileID: 21300000, guid: 3a2c46bc4908e3047a7a4db73b0100a0, type: 3}
+  - {fileID: 21300000, guid: 243ab310fc45cfd49b5209f611c6d424, type: 3}
+  - {fileID: 21300000, guid: 70a7d330dd4025b44b90cf0c89cc74c5, type: 3}
+  - {fileID: 21300000, guid: e4a1bc23baa24a4438ff43ea83889932, type: 3}
+  - {fileID: 21300000, guid: 5c4b74680b7c173419e1b638d89dcccc, type: 3}
+  - {fileID: 21300000, guid: 2f46b59170a1a984985141a9ff3b90ec, type: 3}
+  - {fileID: 21300000, guid: 007a7188ecafc2f4d963675d926c4c4d, type: 3}
+  - {fileID: 21300000, guid: 393aecfca4db63a4d92425be0ce72a9f, type: 3}
+  - {fileID: 21300000, guid: b78c3bc5df7a1ea4caa689fc242502f2, type: 3}
+  - {fileID: 21300000, guid: 38acb7c7c1691b845824fd6674c861fa, type: 3}
+  - {fileID: 21300000, guid: cf378cdabcc8a66478dd8cdfd9b9955c, type: 3}
+  - {fileID: 21300000, guid: bd1ff7de0406c464d952e37ffbb9ed61, type: 3}
+  - {fileID: 21300000, guid: abe013e3e40f8e4479ad6c53a1e2a777, type: 3}
+  - {fileID: 21300000, guid: d136bef5cd087d147900fa914aa7d3bf, type: 3}
+  - {fileID: 21300000, guid: 6ad314e231f3eb54cb043a65d16a73bf, type: 3}
+  - {fileID: 21300000, guid: 03d82e0783f732840a8fc481189fff70, type: 3}
+  - {fileID: 21300000, guid: 784c33c258af3814984f3f2a5b8ca9c0, type: 3}
   playerImage: {fileID: 1525478718, guid: b388600c1c621a649a134084fe50865f, type: 3}
   playerInfo: {fileID: 5271624932381571807}
   steps: 0

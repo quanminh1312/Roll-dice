@@ -118,6 +118,7 @@ namespace Assets.Scripts
         }
         void addPlayer()
         {
+            Helper.ClearPlayers();
             foreach (var item in PlayerChooses)
             {
                 if (item.active)
