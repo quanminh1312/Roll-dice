@@ -54,6 +54,7 @@ namespace Assets.Scripts
             }
             if (isTurn)
             {
+                CheckWinning();
                 if (isTimer)
                 {
                     timerTurn -= 1 * Time.deltaTime;
