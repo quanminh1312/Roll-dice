@@ -109,9 +109,9 @@ namespace Assets.Scripts
             PlayerChooses[index].image.sprite = PlayerSprite[next];
             foreach (var item in PlayerChooses)
             {
-                if (PlayerSprite.IndexOf(item.image.sprite) == next)
+                if (PlayerSprite.IndexOf(item.image.sprite) == next && item != PlayerChooses[index])
                 {
-                    PlayerChooses[index].image.sprite = PlayerSprite[(next + 1) % PlayerSprite.Count];
+                    item.image.sprite = PlayerSprite[(next + 1) % PlayerSprite.Count];
                     break;
                 }
             }
